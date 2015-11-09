@@ -92,7 +92,10 @@ public class MenuManager : MonoBehaviour {
 			case States.watchlist:
 				switch (command) {
 					case "Search":
-						state = States.search;
+						if (!inCoroutine) {
+							PanelIn(searchPanel);
+							state = States.search;
+						}
 						break;
 					case "Watchlist":
 						state = States.watchlist;

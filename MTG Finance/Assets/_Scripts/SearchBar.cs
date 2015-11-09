@@ -37,7 +37,7 @@ public class SearchBar : MonoBehaviour {
 	public void SearchFor(string search) {
 		List<string> matches = CardDictionary.AllCardsContaining(search);
 		DeleteSearchResults();
-		ClearConsole();
+		//ClearConsole();
 		print("Number of matches: " + matches.Count);
 		for (int i = 0; i < maxNumberResultsShown && i < matches.Count; i++) {
 			GameObject newResultGameObject = Instantiate(searchResultPrefab);
