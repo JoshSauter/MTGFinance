@@ -3,26 +3,26 @@ using System.Collections;
 using JSONObj;
 
 public class TCGPlayerInfo {
-    public int multiverse_id;       //MultiverseID of the card for lookup
-    public string card_name;        //Name of the card
-    public string set_name;         //Set the card came from
-    public string last_updated;     //Date of the last time pricing info for the card was updated
-    public string tcg_low;          //Low price from TCGPlayer
-    public string tcg_mid;          //Median price from TCGPlayer
-    public string tcg_avg_foil;     //Average price for a foil version of the card
-    public string tcg_link;         //URL for the card's page on TCGPlayer
-    public string gatherer_link;    //URL for the card's page on Gatherer
+    public int multiverseID;       //MultiverseID of the card for lookup
+    public string cardName;        //Name of the card
+    public string setName;         //Set the card came from
+    public string lastUpdated;     //Date of the last time pricing info for the card was updated
+    public string tcgLow;          //Low price from TCGPlayer
+    public string tcgMid;          //Median price from TCGPlayer
+    public string tcgAvgFoil;     //Average price for a foil version of the card
+    public string tcgLink;         //URL for the card's page on TCGPlayer
+    public string gathererLink;    //URL for the card's page on Gatherer
 
     public TCGPlayerInfo() {
-        multiverse_id = -1;
-        card_name = "";
-        set_name = "";
-        last_updated = "";
-        tcg_low = "";
-        tcg_mid = "";
-        tcg_avg_foil = "";
-        tcg_link = "";
-        gatherer_link = "";
+        multiverseID = -1;
+        cardName = "";
+        setName = "";
+        lastUpdated = "";
+        tcgLow = "";
+        tcgMid = "";
+        tcgAvgFoil = "";
+        tcgLink = "";
+        gathererLink = "";
     }
 
     //Turns a JSONObject into a TCGPlayerInfo object
@@ -39,31 +39,31 @@ public class TCGPlayerInfo {
             switch (key)
             {
                 case "multiverse_id":
-                    returnInfo.multiverse_id = (int)subObject.n;
+                    returnInfo.multiverseID = (int)subObject.n;
                     break;
                 case "card_name":
-                    returnInfo.card_name = subObject.str;
+                    returnInfo.cardName = subObject.str;
                     break;
                 case "set_name":
-                    returnInfo.set_name = subObject.str;
+                    returnInfo.setName = subObject.str;
                     break;
                 case "last_upadated":
-                    returnInfo.last_updated = subObject.str;
+                    returnInfo.lastUpdated = subObject.str;
                     break;
                 case "tcg_low":
-                    returnInfo.tcg_low = subObject.str;
+                    returnInfo.tcgLow = subObject.str;
                     break;
                 case "tcg_mid":
-                    returnInfo.tcg_mid = subObject.str;
+                    returnInfo.tcgMid = subObject.str;
                     break;
                 case "tcg_avg_foil":
-                    returnInfo.tcg_avg_foil = subObject.str;
+                    returnInfo.tcgAvgFoil = subObject.str;
                     break;
                 case "tcg_link":
-                    returnInfo.tcg_link = subObject.str;
+                    returnInfo.tcgLink = subObject.str;
                     break;
                 case "gatherer_link":
-                    returnInfo.gatherer_link = subObject.str;
+                    returnInfo.gathererLink = subObject.str;
                     break;
             }
         }

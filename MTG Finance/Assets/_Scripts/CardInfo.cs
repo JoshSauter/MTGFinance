@@ -33,8 +33,24 @@ public class CardInfo : MonoBehaviour {
             
         curImage.sprite = server.RequestCardImage(cardName);
 
+		//Set up image to open up Gatherer page upon click
+		string tempGathererLink = curInfo.gathererLink;
+		Button imageButton = curImage.gameObject.GetComponent<Button>();
+		imageButton.onClick.RemoveAllListeners();
+		imageButton.onClick.AddListener(delegate {
+			Application.OpenURL(tempGathererLink);
+		});
+
         cardNameText.text = cardName;
-        cardPriceText.text = "TCG Player: $" + curInfo.tcg_mid;
+        cardPriceText.text = "TCG Player: $" + curInfo.tcgMid;
+
+		//Set up price text to open up TCGPlayer page upon click
+		string tempTCGLink = curInfo.tcgLink;
+		Button priceButton = cardPriceText.gameObject.GetComponent<Button>();
+		priceButton.onClick.RemoveAllListeners();
+		priceButton.onClick.AddListener(delegate {
+			Application.OpenURL(tempTCGLink);
+		});
         cardImage = curImage;
 	}
 }

@@ -4,9 +4,9 @@ using UnityEngine.UI;
 using JSONObj;
 
 public class ServerComm : MonoBehaviour {
-	//URL should be completed with /multiverse_id for a specific card
+	//URL should be completed with /multiverseID for a specific card
 	string cardInfoServerURL = "http://ec2-52-10-109-207.us-west-2.compute.amazonaws.com:8000/mtg-card-prices/";
-	//URL should be completed with /multiverse_id.jpg for a specific card
+	//URL should be completed with /multiverseID.jpg for a specific card
 	string cardImageServerURL = "http://ec2-52-10-109-207.us-west-2.compute.amazonaws.com:8080/mtg-card-images/";
 
 	WWW cardPriceGet;
