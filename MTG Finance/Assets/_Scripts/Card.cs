@@ -148,6 +148,15 @@ public class Card {
 		return returnCard;
 	}
 
+	//Creates a simple JSONObject containing only name and multiverseid
+	public static JSONObject CardToSimpleJSON(Card card) {
+		JSONObject cardJSON = new JSONObject(JSONObject.Type.ARRAY);
+		cardJSON.AddField("name", card.cardName);
+		cardJSON.AddField("multiverseid", card.multiverseID);
+
+		return cardJSON;
+	}
+
 	//Overrides C#'s ToString() operator to display card information
 	public override string ToString() {
 		string retString = "Card Name:\t" + cardName;

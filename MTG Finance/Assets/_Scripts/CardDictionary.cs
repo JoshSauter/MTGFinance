@@ -14,9 +14,6 @@ public class CardDictionary : MonoBehaviour {
 
 		//After dictionary is done building, bring in the search panel
 		StartCoroutine(MenuManager.S.PanelInCoroutine(MenuManager.S.searchPanel));
-
-		string test = "Æther";
-		print (test.Replace ("Æ", "AE"));
 	}
 	
 	// Update is called once per frame
@@ -25,21 +22,33 @@ public class CardDictionary : MonoBehaviour {
 	}
 
 	void BuildDictionary() {
-		TextAsset fileTextAsset = Resources.Load<TextAsset>("AllSets");
-		JSONObject allSetsJso = new JSONObject(fileTextAsset.text);
-		foreach (var setJso in allSetsJso.list) {
-			foreach (var cardJso in setJso.GetField("cards").list) {
-				Card newCard = Card.JSONToCard(cardJso);
-				if (CardNames.Contains(newCard.cardName)){
-					continue;
-				}
-				CardNames.Add(newCard.cardName);
-				Cards[newCard.cardName] = newCard;
-				//if (Random.Range(0,100) < 1) {
-				//	print(newCard.ToString());
-				//}
-			}
+		//Uncomment the following line to create the simpleAllCards json file
+		//JSONObject simpleJSON = new JSONObject(JSONObject.Type.ARRAY);
+		TextAsset fileTextAsset = Resources.Load<TextAsset>("simpleAllCards");
+		/// This is to build using the simpleAllCards JSON file (much faster, less information)
+		JSONObject allCardsJso = new JSONObject(fileTextAsset.text);
+		foreach (var cardJso in allCardsJso.list) {
+			Card newCard = Card.JSONToCard(cardJso);
+			CardNames.Add(newCard.cardName);
+			Cards[newCard.cardName] = newCard;
 		}
+
+		/// This is to build using the AllSets JSON file (much slower, more information)
+		//JSONObject allSetsJso = new JSONObject(fileTextAsset.text);
+		//foreach (var setJso in allSetsJso.list) {
+		//	foreach (var cardJso in setJso.GetField("cards").list) {
+		//		Card newCard = Card.JSONToCard(cardJso);
+		//		if (CardNames.Contains(newCard.cardName)){
+		//			continue;
+		//		}
+		//		//Uncomment the following line to create the simpleAllCards json file
+		//		//simpleJSON.Add(Card.CardToSimpleJSON(newCard));
+		//		CardNames.Add(newCard.cardName);
+		//		Cards[newCard.cardName] = newCard;
+		//	}
+		//}
+		//Uncomment the following line to create the simpleAllCards json file
+		//System.IO.File.WriteAllText("./simpleAllCards.json", simpleJSON.ToString());
 		Resources.UnloadAsset(fileTextAsset);
 
 		CardNames.Sort();
