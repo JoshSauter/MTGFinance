@@ -10,7 +10,9 @@ public class CardDictionary : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		BuildDictionary();
+        Screen.orientation = ScreenOrientation.Portrait;
+
+        BuildDictionary();
 
 		//After dictionary is done building, bring in the search panel
 		StartCoroutine(MenuManager.S.PanelInCoroutine(MenuManager.S.searchPanel));
