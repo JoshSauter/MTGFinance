@@ -10,9 +10,12 @@ public class MenuManager : MonoBehaviour {
 	public GameObject searchPanel;
 	public GameObject cardInfoPanel;
 
+	public GameObject editorInputField;
+	public GameObject mobileInputField;
+
 	float transitionTime = 0.175f; //How long panels take to swap out and in
-	Vector2 panelLeftPosition = new Vector2(-600f,0); //Resting position offscreen left
-	Vector2 panelRightPosition = new Vector2(600f,0); //Resting position offscreen right
+	Vector2 panelLeftPosition = new Vector2(-1200f,0); //Resting position offscreen left
+	Vector2 panelRightPosition = new Vector2(1200f,0); //Resting position offscreen right
 
 	bool inCoroutine = false;
 
@@ -25,6 +28,17 @@ public class MenuManager : MonoBehaviour {
 
 	void Awake() {
 		S = this;
+
+		if (Application.isEditor) {
+			editorInputField.SetActive(true);
+			mobileInputField.SetActive(false);
+			SearchBar.S = editorInputField.GetComponent<SearchBar>();
+		}
+		else {
+			editorInputField.SetActive(false);
+			mobileInputField.SetActive(true);
+			SearchBar.S = mobileInputField.GetComponent<SearchBar>();
+		}
 	}
 
 	// Use this for initialization
@@ -110,9 +124,11 @@ public class MenuManager : MonoBehaviour {
 
 	void ToggleMenu() {
 		print("ToggleMenu(): Needs to be implemented.");
+		Application.Quit();
 	}
 
 	public void DisplayCardInfo(string cardName) {
+		print(CardDictionary.Cards[cardName].ToString());
 		PanelIn(cardInfoPanel);
 		state = States.cardInfo;
 

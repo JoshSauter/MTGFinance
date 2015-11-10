@@ -148,6 +148,7 @@ public class Card {
 		return returnCard;
 	}
 
+	//Overrides C#'s ToString() operator to display card information
 	public override string ToString() {
 		string retString = "Card Name:\t" + cardName;
 		if (manaCost != "") {
@@ -183,11 +184,11 @@ public class Card {
 			retString += "\nToughness:\t" + toughness;
 		}
 		if (loyalty != -1) {
-			retString += "Loyalty:\t\t" + loyalty;
+			retString += "\nLoyalty:\t\t" + loyalty;
 		}
 
 		if (multiverseID != -1) {
-			retString += "MultiverseID:\t" + multiverseID;
+			retString += "\nMultiverseID:\t" + multiverseID;
 		}
 
 		return retString;

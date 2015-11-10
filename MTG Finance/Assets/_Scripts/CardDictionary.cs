@@ -14,6 +14,9 @@ public class CardDictionary : MonoBehaviour {
 
 		//After dictionary is done building, bring in the search panel
 		StartCoroutine(MenuManager.S.PanelInCoroutine(MenuManager.S.searchPanel));
+
+		string test = "Æther";
+		print (test.Replace ("Æ", "AE"));
 	}
 	
 	// Update is called once per frame
@@ -22,15 +25,20 @@ public class CardDictionary : MonoBehaviour {
 	}
 
 	void BuildDictionary() {
-		TextAsset fileTextAsset = Resources.Load<TextAsset>("AllCards");
-		JSONObject allCardsJso = new JSONObject(fileTextAsset.text);
-		foreach (var cardJso in allCardsJso.list) {
-			Card newCard = Card.JSONToCard(cardJso);
-			CardNames.Add(newCard.cardName);
-			Cards[newCard.cardName] = newCard;
-			//if (Random.Range(0,100) < 1) {
-			//	print(newCard.ToString());
-			//}
+		TextAsset fileTextAsset = Resources.Load<TextAsset>("AllSets");
+		JSONObject allSetsJso = new JSONObject(fileTextAsset.text);
+		foreach (var setJso in allSetsJso.list) {
+			foreach (var cardJso in setJso.GetField("cards").list) {
+				Card newCard = Card.JSONToCard(cardJso);
+				if (CardNames.Contains(newCard.cardName)){
+					continue;
+				}
+				CardNames.Add(newCard.cardName);
+				Cards[newCard.cardName] = newCard;
+				//if (Random.Range(0,100) < 1) {
+				//	print(newCard.ToString());
+				//}
+			}
 		}
 		Resources.UnloadAsset(fileTextAsset);
 
@@ -45,7 +53,7 @@ public class CardDictionary : MonoBehaviour {
 		List<string> returnList = new List<string>();
 
 		foreach (string fullname in CardNames) {
-			string lowerFullname = fullname.ToLower();
+			string lowerFullname = fullname.Replace("æ", "ae").Replace("Æ", "AE").ToLower();
 			string[] nameWords = lowerFullname.Split(' ');
 
 			//Assume a word is valid until proven otherwise
