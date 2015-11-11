@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject editorInputField;
 	public GameObject mobileInputField;
 
-	float transitionTime = 0.175f; //How long panels take to swap out and in
+	float transitionTime = 0.375f; //How long panels take to swap out and in
 	Vector2 panelLeftPosition = new Vector2(-1200f,0); //Resting position offscreen left
 	Vector2 panelRightPosition = new Vector2(1200f,0); //Resting position offscreen right
 
@@ -60,6 +60,8 @@ public class MenuManager : MonoBehaviour {
 				});
 			}
 		}
+		
+		StartCoroutine(PanelInCoroutine(searchPanel));
 	}
 
 	public void Click(Button button) {

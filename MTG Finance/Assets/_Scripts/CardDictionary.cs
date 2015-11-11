@@ -8,14 +8,15 @@ public class CardDictionary : MonoBehaviour {
 	public static List<string> CardNames = new List<string>();
 	public static Dictionary<string, Card> Cards = new Dictionary<string, Card>();
 
+	//Number of cards to process each frame
+	int numCardsPerFrame = 400;
+
 	// Use this for initialization
 	void Start () {
+		DontDestroyOnLoad(this.gameObject);
         Screen.orientation = ScreenOrientation.Portrait;
 
         BuildDictionary();
-
-		//After dictionary is done building, bring in the search panel
-		StartCoroutine(MenuManager.S.PanelInCoroutine(MenuManager.S.searchPanel));
 	}
 	
 	// Update is called once per frame
@@ -24,15 +25,23 @@ public class CardDictionary : MonoBehaviour {
 	}
 
 	void BuildDictionary() {
+		StartCoroutine(BuildDictionaryCoroutine());
+	}
+	IEnumerator BuildDictionaryCoroutine() {
 		//Uncomment the following line to create the simpleAllCards json file
 		//JSONObject simpleJSON = new JSONObject(JSONObject.Type.ARRAY);
 		TextAsset fileTextAsset = Resources.Load<TextAsset>("simpleAllCards");
 		/// This is to build using the simpleAllCards JSON file (much faster, less information)
 		JSONObject allCardsJso = new JSONObject(fileTextAsset.text);
+		int i = 0;
 		foreach (var cardJso in allCardsJso.list) {
 			Card newCard = Card.JSONToCard(cardJso);
 			CardNames.Add(newCard.cardName);
 			Cards[newCard.cardName] = newCard;
+			i++;
+			if (i % numCardsPerFrame == 0) {
+				yield return 0;
+			}
 		}
 
 		/// This is to build using the AllSets JSON file (much slower, more information)
@@ -54,6 +63,11 @@ public class CardDictionary : MonoBehaviour {
 		Resources.UnloadAsset(fileTextAsset);
 
 		CardNames.Sort();
+
+		yield return new WaitForSeconds(0.5f);
+
+		//After dictionary is done building, load the main scene
+		Application.LoadLevel("_Scene_Main_JDS");
 	}
 
 	//Returns all card names matching a particular search
