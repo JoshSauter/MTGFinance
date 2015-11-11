@@ -34,3 +34,4 @@ ehthumbs.db
 [Tt]humbs.db
 
 media/
+*.pyc
