@@ -17,6 +17,6 @@ from django.conf.urls import include, url
 from mtg_prices import views
 
 urlpatterns = [
-    url(r'^mtg-card-prices/(?P<multiverse_id>[0-9]+)/$',
-        views.get_card_price_json, name='get_card_price_json'),
+    url(r'^mtg-card-prices/(?P<card_name>.+)/$',
+        views.get_card_prices_json, name='get_card_prices_json'),
 ]
