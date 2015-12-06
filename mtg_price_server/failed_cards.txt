@@ -1,0 +1,473 @@
+500	Portal Three Kingdoms		Kongming, "Sleeping Dragon"
+500	Portal Three Kingdoms		Pang Tong, "Young Phoenix"
+500	Champions of Kamigawa		Kenzo the Hardhearted
+500	Champions of Kamigawa		Autumn-Tail, Kitsune Sage
+500	Champions of Kamigawa		Tomoya the Revealer
+500	Champions of Kamigawa		Tobita, Master of Winds
+500	Champions of Kamigawa		Nighteyes the Desecrator
+500	Champions of Kamigawa		Stabwhisker the Odious
+500	Champions of Kamigawa		Tok-Tok, Volcano Born
+500	Champions of Kamigawa		Brothers Yamazaki
+500	Champions of Kamigawa		Brothers Yamazaki
+500	Champions of Kamigawa		Goka the Unjust
+500	Champions of Kamigawa		Dokai, Weaver of Life
+500	Champions of Kamigawa		Shidako, Broodmistress
+500	Fallen Empires		Brassclaw Orcs
+500	Fallen Empires		Brassclaw Orcs
+500	Fallen Empires		Brassclaw Orcs
+500	Fallen Empires		Brassclaw Orcs
+500	Fallen Empires		Combat Medic
+500	Fallen Empires		Combat Medic
+500	Fallen Empires		Combat Medic
+500	Fallen Empires		Combat Medic
+500	Fallen Empires		Dwarven Soldier
+500	Fallen Empires		Dwarven Soldier
+500	Fallen Empires		Dwarven Soldier
+500	Fallen Empires		Goblin Grenade
+500	Fallen Empires		Goblin Grenade
+500	Fallen Empires		Goblin Grenade
+500	Fallen Empires		Goblin War Drums
+500	Fallen Empires		Goblin War Drums
+500	Fallen Empires		Goblin War Drums
+500	Fallen Empires		Goblin War Drums
+500	Fallen Empires		Homarid Warrior
+500	Fallen Empires		Homarid Warrior
+500	Fallen Empires		Homarid Warrior
+500	Fallen Empires		Hymn to Tourach
+500	Fallen Empires		Hymn to Tourach
+500	Fallen Empires		Hymn to Tourach
+500	Fallen Empires		Hymn to Tourach
+500	Fallen Empires		Icatian Javelineers
+500	Fallen Empires		Icatian Javelineers
+500	Fallen Empires		Icatian Javelineers
+500	Fallen Empires		Icatian Scout
+500	Fallen Empires		Icatian Scout
+500	Fallen Empires		Icatian Scout
+500	Fallen Empires		Icatian Scout
+500	Fallen Empires		Initiates of the Ebon Hand
+500	Fallen Empires		Initiates of the Ebon Hand
+500	Fallen Empires		Initiates of the Ebon Hand
+500	Fallen Empires		Mindstab Thrull
+500	Fallen Empires		Mindstab Thrull
+500	Fallen Empires		Mindstab Thrull
+500	Fallen Empires		Necrite
+500	Fallen Empires		Necrite
+500	Fallen Empires		Necrite
+500	Fallen Empires		Night Soil
+500	Fallen Empires		Night Soil
+500	Fallen Empires		Night Soil
+500	Fallen Empires		Orcish Spy
+500	Fallen Empires		Orcish Spy
+500	Fallen Empires		Orcish Spy
+500	Fallen Empires		Thallid
+500	Fallen Empires		Thallid
+500	Fallen Empires		Thallid
+500	Fallen Empires		Thallid
+500	Fallen Empires		Vodalian Soldiers
+500	Fallen Empires		Vodalian Soldiers
+500	Fallen Empires		Vodalian Soldiers
+500	Fallen Empires		Vodalian Soldiers
+500	Innistrad		Unholy Fiend
+500	Innistrad		Thraben Militia
+500	Innistrad		Homicidal Brute
+500	Innistrad		Insectile Aberration
+500	Innistrad		Ludevic's Abomination
+500	Innistrad		Lord of Lineage
+500	Innistrad		Stalking Vampire
+500	Innistrad		Bane of Hanweir
+500	Innistrad		Wildblood Pack
+500	Innistrad		Terror of Kruin Pass
+500	Innistrad		Merciless Predator
+500	Innistrad		Rampaging Werewolf
+500	Innistrad		Ironfang
+500	Innistrad		Nightfall Predator
+500	Innistrad		Garruk, the Veil-Cursed
+500	Innistrad		Gatstaf Howler
+500	Innistrad		Krallenhorde Wantons
+500	Innistrad		Howlpack Alpha
+500	Innistrad		Ulvenwald Primordials
+500	Innistrad		Howlpack of Estwald
+500	Saviors of Kamigawa		Rune-Tail's Essence
+500	Saviors of Kamigawa		Erayo's Essence
+500	Saviors of Kamigawa		Kuon's Essence
+500	Saviors of Kamigawa		Homura's Essence
+500	Saviors of Kamigawa		Sasaya's Essence
+500	Betrayers of Kamigawa		Kaiso, Memory of Loyalty
+500	Betrayers of Kamigawa		Jaraku the Interloper
+500	Betrayers of Kamigawa		Scarmaker
+500	Betrayers of Kamigawa		Azamuki, Treachery Incarnate
+500	Betrayers of Kamigawa		Ichiga, Who Topples Oaks
+500	Duel Decks: Anthology		Giant Growth
+500	Duel Decks: Anthology		Harmonize
+500	Duel Decks: Anthology		Corrupt
+500	Duel Decks: Elspeth vs. Kiora		Soldier
+500	Duel Decks: Elspeth vs. Kiora		Kraken
+500	Commander		Jötun Grunt
+500	Commander		Nighteyes the Desecrator
+500	Commander		Fire
+500	Commander		Ice
+500	Media Inserts		Arena
+500	Media Inserts		Sewers of Estark
+500	Media Inserts		Nalathni Dragon
+500	Media Inserts		Mana Crypt
+500	Media Inserts		Windseeker Centaur
+500	Media Inserts		Giant Badger
+500	Planar Chaos		Boom
+500	Planar Chaos		Bust
+500	Planar Chaos		Dead
+500	Planar Chaos		Gone
+500	Planar Chaos		Rough
+500	Planar Chaos		Tumble
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Plains
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Island
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Swamp
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Mountain
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+FAIL	Zendikar		Forest
+500	Duel Decks: Jace vs. Chandra		Elemental Shaman
+500	Dissension		Bound
+500	Dissension		Determined
+500	Dissension		Crime
+500	Dissension		Punishment
+500	Dissension		Hide
+500	Dissension		Seek
+500	Dissension		Hit
+500	Dissension		Run
+500	Dissension		Odds
+500	Dissension		Ends
+500	Dissension		Pure
+500	Dissension		Simple
+500	Dissension		Research
+500	Dissension		Development
+500	Dissension		Rise
+500	Dissension		Fall
+500	Dissension		Supply
+500	Dissension		Demand
+500	Dissension		Trial
+500	Dissension		Error
+FAIL	Antiquities		Mishra's Factory
+FAIL	Antiquities		Mishra's Factory
+FAIL	Antiquities		Mishra's Factory
+FAIL	Antiquities		Mishra's Factory
+FAIL	Antiquities		Strip Mine
+FAIL	Antiquities		Strip Mine
+FAIL	Antiquities		Strip Mine
+FAIL	Antiquities		Strip Mine
+FAIL	Antiquities		Urza's Mine
+FAIL	Antiquities		Urza's Mine
+FAIL	Antiquities		Urza's Mine
+FAIL	Antiquities		Urza's Mine
+FAIL	Antiquities		Urza's Power Plant
+FAIL	Antiquities		Urza's Power Plant
+FAIL	Antiquities		Urza's Power Plant
+FAIL	Antiquities		Urza's Power Plant
+FAIL	Antiquities		Urza's Tower
+FAIL	Antiquities		Urza's Tower
+FAIL	Antiquities		Urza's Tower
+FAIL	Antiquities		Urza's Tower
+500	Unhinged		Look at Me, I'm R&D
+500	Unhinged		Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental
+500	Unhinged		"Ach! Hans, Run!"
+500	Unhinged		Who
+500	Unhinged		What
+500	Unhinged		When
+500	Unhinged		Where
+500	Unhinged		Why
+500	Unhinged		R&D's Secret Lair
+500	Timeshifted		Assault
+500	Timeshifted		Battery
+500	Commander 2013		Rough
+500	Commander 2013		Tumble
+500	Commander 2013		Lim-Dûl's Vault
+500	Duel Decks: Ajani vs. Nicol Bolas		Spite
+500	Duel Decks: Ajani vs. Nicol Bolas		Malice
+500	Duel Decks: Ajani vs. Nicol Bolas		Pain
+500	Duel Decks: Ajani vs. Nicol Bolas		Suffering
+500	Duel Decks: Ajani vs. Nicol Bolas		Rise
+500	Duel Decks: Ajani vs. Nicol Bolas		Fall
+500	Weatherlight		Bösium Strip
+500	Dragon Con		Nalathni Dragon
+500	Planechase 2012		Stairs to Infinity
+500	Alliances		Aesthir Glider
+500	Alliances		Aesthir Glider
+500	Alliances		Arcane Denial
+500	Alliances		Arcane Denial
+500	Alliances		Deadly Insect
+500	Alliances		Deadly Insect
+500	Alliances		Elvish Ranger
+500	Alliances		Elvish Ranger
+500	Alliances		False Demise
+500	Alliances		False Demise
+500	Alliances		Feast or Famine
+500	Alliances		Feast or Famine
+500	Alliances		Gorilla Chieftain
+500	Alliances		Gorilla Chieftain
+500	Alliances		Guerrilla Tactics
+500	Alliances		Guerrilla Tactics
+500	Alliances		Kjeldoran Pride
+500	Alliances		Kjeldoran Pride
+500	Alliances		Lat-Nam's Legacy
+500	Alliances		Lat-Nam's Legacy
+500	Alliances		Lim-Dûl's High Guard
+500	Alliances		Lim-Dûl's High Guard
+500	Alliances		Lim-Dûl's Paladin
+500	Alliances		Lim-Dûl's Vault
+500	Alliances		Phantasmal Fiend
+500	Alliances		Phantasmal Fiend
+500	Alliances		Reinforcements
+500	Alliances		Reinforcements
+500	Alliances		Reprisal
+500	Alliances		Reprisal
+500	Alliances		Soldevi Sage
+500	Alliances		Soldevi Sage
+500	Alliances		Storm Crow
+500	Alliances		Storm Crow
+500	Alliances		Storm Shaman
+500	Alliances		Storm Shaman
+500	Alliances		Swamp Mosquito
+500	Alliances		Swamp Mosquito
+500	Magic Origins		Gideon, Battle-Forged
+500	Magic Origins		Jace, Telepath Unbound
+500	Magic Origins		Liliana, Defiant Necromancer
+500	Magic Origins		Chandra, Roaring Flame
+500	Magic Origins		Nissa, Sage Animist
+500	Duel Decks: Speed vs. Cunning		Goblin
+500	Archenemy		Wax
+500	Archenemy		Wane
+500	Dragon's Maze		Alive
+500	Dragon's Maze		Well
+500	Dragon's Maze		Armed
+500	Dragon's Maze		Dangerous
+500	Dragon's Maze		Beck
+500	Dragon's Maze		Call
+500	Dragon's Maze		Breaking
+500	Dragon's Maze		Entering
+500	Dragon's Maze		Catch
+500	Dragon's Maze		Release
+500	Dragon's Maze		Down
+500	Dragon's Maze		Dirty
+500	Dragon's Maze		Far
+500	Dragon's Maze		Away
+500	Dragon's Maze		Flesh
+500	Dragon's Maze		Blood
+500	Dragon's Maze		Give
+500	Dragon's Maze		Take
+500	Dragon's Maze		Profit
+500	Dragon's Maze		Loss
+500	Dragon's Maze		Protect
+500	Dragon's Maze		Serve
+500	Dragon's Maze		Ready
+500	Dragon's Maze		Willing
+500	Dragon's Maze		Toil
+500	Dragon's Maze		Trouble
+500	Dragon's Maze		Turn
+500	Dragon's Maze		Burn
+500	Dragon's Maze		Wear
+500	Dragon's Maze		Tear
+500	Duel Decks: Anthology		Corrupt
+500	Duel Decks: Izzet vs. Golgari		Fire
+500	Duel Decks: Izzet vs. Golgari		Ice
+500	Duel Decks: Izzet vs. Golgari		Life
+500	Duel Decks: Izzet vs. Golgari		Death
+500	Chronicles		Urza's Mine
+500	Chronicles		Urza's Mine
+500	Chronicles		Urza's Mine
+500	Chronicles		Urza's Mine
+500	Chronicles		Urza's Power Plant
+500	Chronicles		Urza's Power Plant
+500	Chronicles		Urza's Power Plant
+500	Chronicles		Urza's Power Plant
+500	Chronicles		Urza's Tower
+500	Chronicles		Urza's Tower
+500	Chronicles		Urza's Tower
+500	Chronicles		Urza's Tower
+500	Duel Decks: Anthology		Giant Growth
+500	Duel Decks: Anthology		Harmonize
+500	Time Spiral		Lim-Dûl the Necromancer
+500	Apocalypse		Fire
+500	Apocalypse		Ice
+500	Apocalypse		Illusion
+500	Apocalypse		Reality
+500	Apocalypse		Life
+500	Apocalypse		Death
+500	Apocalypse		Night
+500	Apocalypse		Day
+500	Apocalypse		Order
+500	Apocalypse		Chaos
+500	Invasion		Stand
+500	Invasion		Deliver
+500	Invasion		Spite
+500	Invasion		Malice
+500	Invasion		Pain
+500	Invasion		Suffering
+500	Invasion		Assault
+500	Invasion		Battery
+500	Invasion		Wax
+500	Invasion		Wane
+500	Unglued		B.F.M. (Big Furry Monster)
+500	Unglued		B.F.M. (Big Furry Monster)
+500	Unglued		The Ultimate Nightmare of Wizards of the Coast® Customer Service
+500	Unglued		Pegasus token card
+500	Unglued		Soldier token card
+500	Unglued		Zombie token card
+500	Unglued		Goblin token card
+500	Unglued		Sheep token card
+500	Unglued		Squirrel token card
+500	Duel Decks: Phyrexia vs. the Coalition		Hornet
+500	Ice Age		Legions of Lim-Dûl
+500	Ice Age		Lim-Dûl's Cohort
+500	Ice Age		Lim-Dûl's Hex
+500	Ice Age		Márton Stromgald
+500	Ice Age		Oath of Lim-Dûl
+500	Coldsnap		Jötun Grunt
+500	Coldsnap		Jötun Owl Keeper
+500	Homelands		Hungry Mist
+500	Homelands		Hungry Mist
+500	Homelands		Mesa Falcon
+500	Homelands		Mesa Falcon
+500	Vanguard		Goblin Warchief Avatar
+500	Vanguard		Goblin Warchief Avatar
+500	Vanguard		Birds of Paradise Avatar
+500	Vanguard		Fallen Angel Avatar
+500	Vanguard		Flametongue Kavu Avatar
+500	Vanguard		Erhnam Djinn Avatar
+500	Vanguard		Erhnam Djinn Avatar
+500	Vanguard		Grinning Demon Avatar
+500	Vanguard		Grinning Demon Avatar
+500	Vanguard		Akroma, Angel of Wrath Avatar
+500	Vanguard		Karona, False God Avatar
+500	Vanguard		Elvish Champion Avatar
+500	Vanguard		Bosh, Iron Golem Avatar
+500	Vanguard		Arcbound Overseer Avatar
+500	Vanguard		Etched Oracle Avatar
+500	Vanguard		Eight-and-a-Half-Tails Avatar
+500	Vanguard		Higure, the Still Wind Avatar
+500	Vanguard		Ink-Eyes, Servant of Oni Avatar
+500	Vanguard		Hell's Caretaker Avatar
+500	Vanguard		Maro Avatar
+500	Vanguard		Frenetic Efreet Avatar
+500	Vanguard		Loxodon Hierarch Avatar
+500	Vanguard		Chronatog Avatar
+500	Vanguard		Lyzolda, the Blood Witch Avatar
+500	Vanguard		Haakon, Stromgald Scourge Avatar
+500	Vanguard		Diamond Faerie Avatar
+500	Vanguard		Jaya Ballard Avatar
+500	Vanguard		Braids, Conjurer Adept Avatar
+500	Vanguard		Heartwood Storyteller Avatar
+500	Vanguard		Jhoira of the Ghitu Avatar
+500	Vanguard		Arcanis, the Omnipotent Avatar
+500	Vanguard		Dakkon Blackblade Avatar
+500	Vanguard		Ashling the Pilgrim Avatar
+500	Vanguard		Maralen of the Mornsong Avatar
+500	Vanguard		Ashling, the Extinguisher Avatar
+500	Vanguard		Figure of Destiny Avatar
+500	Vanguard		Mayael the Anima Avatar
+500	Vanguard		Kresh the Bloodbraided Avatar
+500	Vanguard		Eladamri, Lord of Leaves Avatar
+500	Vanguard		Malfegor Avatar
+500	Vanguard		Maelstrom Archangel Avatar
+500	Vanguard		Hermit Druid Avatar
+500	Vanguard		Dauntless Escort Avatar
+500	Vanguard		Enigma Sphinx Avatar
+500	Vanguard		Master of the Wild Hunt Avatar
+500	Vanguard		Birds of Paradise Avatar
+500	Vanguard		Prodigal Sorcerer Avatar
+500	Vanguard		Prodigal Sorcerer Avatar
+500	Vanguard		Phage the Untouchable Avatar
+500	Vanguard		Royal Assassin Avatar
+500	Vanguard		Platinum Angel Avatar
+500	Vanguard		Raksha Golden Cub Avatar
+500	Vanguard		Sakashima the Impostor Avatar
+500	Vanguard		Oni of Wild Places Avatar
+500	Vanguard		Rumbling Slum Avatar
+500	Vanguard		Nekrataal Avatar
+500	Vanguard		Momir Vig, Simic Visionary Avatar
+500	Vanguard		Mirri the Cursed Avatar
+500	Vanguard		Mirror Entity Avatar
+500	Vanguard		Peacekeeper Avatar
+500	Vanguard		Morinfen Avatar
+500	Vanguard		Reaper King Avatar
+500	Vanguard		Murderous Redcap Avatar
+500	Vanguard		Necropotence Avatar
+500	Vanguard		Orcish Squatters Avatar
+500	Vanguard		Rith, the Awakener Avatar
+500	Vanguard		Royal Assassin Avatar
+500	Vanguard		Rith, the Awakener Avatar
+500	Vanguard		Platinum Angel Avatar
+500	Vanguard		Serra Angel Avatar
+500	Vanguard		Serra Angel Avatar
+500	Vanguard		Stalking Tiger Avatar
+500	Vanguard		Two-Headed Giant of Foriys Avatar
+500	Vanguard		Viridian Zealot Avatar
+500	Vanguard		Seshiro the Anointed Avatar
+500	Vanguard		Sisters of Stone Death Avatar
+500	Vanguard		Teysa, Orzhov Scion Avatar
+500	Vanguard		Stuffy Doll Avatar
+500	Vanguard		Squee, Goblin Nabob Avatar
+500	Vanguard		Stonehewer Giant Avatar
+500	Vanguard		Tradewind Rider Avatar
+500	Vanguard		Sliver Queen Avatar
+500	Vanguard		Tradewind Rider Avatar
+500	Vanguard		Vampire Nocturnus Avatar
+500	Duel Decks: Zendikar vs. Eldrazi		Eldrazi Spawn
+500	Duel Decks: Zendikar vs. Eldrazi		Eldrazi Spawn
+500	Duel Decks: Zendikar vs. Eldrazi		Eldrazi Spawn
+500	Duel Decks: Zendikar vs. Eldrazi		Hellion
+500	Duel Decks: Zendikar vs. Eldrazi		Plant
+500	Dark Ascension		Unhallowed Cathar
+500	Dark Ascension		Séance
+500	Dark Ascension		Ghastly Haunting
+500	Dark Ascension		Markov's Servant
+500	Dark Ascension		Archdemon of Greed
+500	Dark Ascension		Werewolf Ransacker
+500	Dark Ascension		Hinterland Scourge
+500	Dark Ascension		Tovolar's Magehunter
+500	Dark Ascension		Silverpelt Werewolf
+500	Dark Ascension		Moonscarred Werewolf
+500	Dark Ascension		Krallenhorde Killer
+500	Dark Ascension		Ravager of the Fells
+500	Dark Ascension		Chalice of Death
+500	Dark Ascension		Withengar Unbound
+500	Arabian Nights		Juzám Djinn
+500	Arabian Nights		Mountain
+500	Arabian Nights		Nafs Asp
+500	Arabian Nights		Nafs Asp
+500	Arabian Nights		Ring of Ma'rûf
+500	Planechase		Assault
+500	Planechase		Battery
+500	Planechase		Order
+500	Planechase		Chaos
