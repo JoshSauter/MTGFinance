@@ -32,7 +32,7 @@ public class SearchResult : MonoBehaviour {
 			string temp = value;
 			button.onClick.RemoveAllListeners();
 			button.onClick.AddListener(delegate {
-				MenuManager.S.DisplayCardInfo(temp);
+				MenuManager.S.PopulateVersionList(temp);
 				SearchBar.S.DeleteSearchResults();
 				SearchBar.S.ClearSearchTerms();
 			});

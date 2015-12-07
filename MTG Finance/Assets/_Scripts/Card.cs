@@ -148,11 +148,11 @@ public class Card {
 		return returnCard;
 	}
 
-	//Creates a simple JSONObject containing only name and multiverseid
+	//Creates a simple JSONObject containing only name// and multiverseid
 	public static JSONObject CardToSimpleJSON(Card card) {
 		JSONObject cardJSON = new JSONObject(JSONObject.Type.ARRAY);
 		cardJSON.AddField("name", card.cardName);
-		cardJSON.AddField("multiverseid", card.multiverseID);
+		//cardJSON.AddField("multiverseid", card.multiverseID);
 
 		return cardJSON;
 	}

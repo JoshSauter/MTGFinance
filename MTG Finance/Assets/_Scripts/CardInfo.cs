@@ -9,6 +9,7 @@ public class CardInfo : MonoBehaviour {
     public Image cardImage;
 
     ServerComm server;
+
 	// Use this for initialization
 	void Start () {
         server = GetComponent<ServerComm>();
@@ -23,15 +24,15 @@ public class CardInfo : MonoBehaviour {
 	//appropriate field with this information
 	//TODO: Cache prices for a given day so we don't query the server
 	//for prices we already know (prices only change daily)
-	public void DisplayInformationFor(string cardName) {
+	public void DisplayInformationFor(string cardName, int multiverseID) {
         //Get card price info
-        JSONObject curCardJSON = server.RequestCardInfo(cardName);
+        JSONObject curCardJSON = server.RequestCardInfo(multiverseID);
         TCGPlayerInfo curInfo = TCGPlayerInfo.JSONToTCGPlayerInfo(curCardJSON);
 
         //Get card image
         Image curImage = cardImage;
             
-        curImage.sprite = server.RequestCardImage(cardName);
+        curImage.sprite = server.RequestCardImage(multiverseID);
 
 		//Set up image to open up Gatherer page upon click
 		string tempGathererLink = curInfo.gathererLink;

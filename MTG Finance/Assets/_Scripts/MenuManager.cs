@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject menuCanvas;
 	public GameObject searchPanel;
 	public GameObject cardInfoPanel;
+	public GameObject cardVersionsPanel;
 
 	public GameObject editorInputField;
 	public GameObject mobileInputField;
@@ -22,6 +23,7 @@ public class MenuManager : MonoBehaviour {
 	enum States {
 		search,
 		watchlist,
+		cardVersions,
 		cardInfo
 	}
 	States state = States.search;
@@ -83,7 +85,27 @@ public class MenuManager : MonoBehaviour {
 						state = States.watchlist;
 						break;
 					case "Menu":
-						ToggleMenu();
+						Quit();
+						break;
+				}
+				break;
+
+			case States.cardVersions:
+				switch (command) {
+					case "Search":
+						if (!inCoroutine) {
+							PanelIn(searchPanel);
+							state = States.search;
+						}
+						break;
+					case "Watchlist":
+						state = States.watchlist;
+						break;
+					case "Menu":
+						if (!inCoroutine) {
+							PanelIn(searchPanel);
+							state = States.search;
+						}
 						break;
 				}
 				break;
@@ -100,7 +122,10 @@ public class MenuManager : MonoBehaviour {
 						state = States.watchlist;
 						break;
 					case "Menu":
-						ToggleMenu();
+						if (!inCoroutine) {
+							PanelIn(cardVersionsPanel);
+							state = States.cardVersions;
+						}
 						break;
 				}
 				break;
@@ -117,24 +142,34 @@ public class MenuManager : MonoBehaviour {
 						state = States.watchlist;
 						break;
 					case "Menu":
-						ToggleMenu();
+						if (!inCoroutine) {
+							PanelIn(searchPanel);
+							state = States.search;
+						}
 						break;
 				}
 				break;
 		}
 	}
 
-	void ToggleMenu() {
-		print("ToggleMenu(): Needs to be implemented.");
+	void Quit() {
 		Application.Quit();
 	}
 
-	public void DisplayCardInfo(string cardName) {
-		print(CardDictionary.Cards[cardName].ToString());
+	public void PopulateVersionList(string cardName) {
+		print(cardName);
+		PanelIn(cardVersionsPanel);
+		state = States.cardVersions;
+
+		cardVersionsPanel.GetComponent<CardVersions>().DisplayInformationFor(cardName);
+	}
+
+	public void DisplayCardInfo(string cardName, int multiverseID) {
+		print(multiverseID);
 		PanelIn(cardInfoPanel);
 		state = States.cardInfo;
 
-		cardInfoPanel.GetComponent<CardInfo>().DisplayInformationFor(cardName);
+		cardInfoPanel.GetComponent<CardInfo>().DisplayInformationFor(cardName, multiverseID);
 	}
 
 	//Make sure to call PanelIn(GameObject panelIn) before changing state
@@ -142,6 +177,9 @@ public class MenuManager : MonoBehaviour {
 		switch (state) {
 			case States.search:
 				StartCoroutine(PanelOutCoroutine(searchPanel));
+				break;
+			case States.cardVersions:
+				StartCoroutine(PanelOutCoroutine(cardVersionsPanel));
 				break;
 			case States.cardInfo:
 				StartCoroutine(PanelOutCoroutine(cardInfoPanel));
