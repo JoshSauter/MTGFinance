@@ -1,7 +1,11 @@
 from django.http import JsonResponse
 from mtg_prices.models import MTGCardPrice
 
-def get_card_price_json(request, multiverse_id):
-    card_price_obj = MTGCardPrice.objects.get(multiverse_id=multiverse_id);
-    return JsonResponse(card_price_obj.get_json_dict())
+def get_card_prices_json(request, card_name):
+    card_price_objs = MTGCardPrice.objects.filter(card_name=card_name)
+    if not card_price_objs.exists():
+        return JsonResponse({'error': 'Card does not exist in database'})
+
+    json_dict = {'cards': [c.get_json_dict() for c in card_price_objs]}
+    return JsonResponse(json_dict)
 

@@ -25,7 +25,6 @@ public class ServerComm : MonoBehaviour {
     public JSONObject RequestCardInfo(string cardName) {
         int multiverseID = CardDictionary.Cards[cardName].multiverseID;
         string cardInfoURL = cardInfoServerURL + multiverseID + "/";
-
         cardPriceGet = new WWW(cardInfoURL);
 
         JSONObject cardInfo = new JSONObject();
@@ -33,8 +32,8 @@ public class ServerComm : MonoBehaviour {
         StartCoroutine(WaitForResponse(cardPriceGet));
 
         //Must be done so that we don't read info from cardPriceGet before it's completely downloaded
-        while (!cardPriceGet.isDone) { } 
-
+        while (!cardPriceGet.isDone) { }
+		
         cardInfo = new JSONObject(cardPriceGet.text);
 
         return cardInfo;

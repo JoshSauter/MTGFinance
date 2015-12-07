@@ -30,8 +30,8 @@ public class CardDictionary : MonoBehaviour {
 	IEnumerator BuildDictionaryCoroutine() {
 		//Uncomment the following line to create the simpleAllCards json file
 		//JSONObject simpleJSON = new JSONObject(JSONObject.Type.ARRAY);
-		TextAsset fileTextAsset = Resources.Load<TextAsset>("simpleAllCards");
 		/// This is to build using the simpleAllCards JSON file (much faster, less information)
+		TextAsset fileTextAsset = Resources.Load<TextAsset>("simpleAllCards");
 		JSONObject allCardsJso = new JSONObject(fileTextAsset.text);
 		int i = 0;
 		foreach (var cardJso in allCardsJso.list) {
@@ -45,21 +45,22 @@ public class CardDictionary : MonoBehaviour {
 		}
 
 		/// This is to build using the AllSets JSON file (much slower, more information)
+		//TextAsset fileTextAsset = Resources.Load<TextAsset>("AllSets");
 		//JSONObject allSetsJso = new JSONObject(fileTextAsset.text);
 		//foreach (var setJso in allSetsJso.list) {
 		//	foreach (var cardJso in setJso.GetField("cards").list) {
 		//		Card newCard = Card.JSONToCard(cardJso);
-		//		if (CardNames.Contains(newCard.cardName)){
+		//		if (CardNames.Contains(newCard.cardName) || newCard.multiverseID == -1) {
 		//			continue;
 		//		}
 		//		//Uncomment the following line to create the simpleAllCards json file
-		//		//simpleJSON.Add(Card.CardToSimpleJSON(newCard));
+		//		simpleJSON.Add(Card.CardToSimpleJSON(newCard));
 		//		CardNames.Add(newCard.cardName);
 		//		Cards[newCard.cardName] = newCard;
 		//	}
 		//}
 		//Uncomment the following line to create the simpleAllCards json file
-		//System.IO.File.WriteAllText("./simpleAllCards.json", simpleJSON.ToString());
+		//System.IO.File.WriteAllText("./Assets/Resources/simpleAllCards.json", simpleJSON.ToString());
 		Resources.UnloadAsset(fileTextAsset);
 
 		CardNames.Sort();
