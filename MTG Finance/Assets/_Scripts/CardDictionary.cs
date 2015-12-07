@@ -67,7 +67,7 @@ public class CardDictionary : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 
 		//After dictionary is done building, load the main scene
-		Application.LoadLevel("_Scene_Main_JDS");
+		Application.LoadLevel("_Scene_Main");
 	}
 
 	//Returns all card names matching a particular search
