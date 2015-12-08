@@ -1,0 +1,17 @@
+Normal
+non-ascii
+  directional quotes
+  & -> and
+  ö -> o
+  û -> u
+  á -> a
+  é -> e
+name too long
+multi art in one set
+basic lands
+  full art
+
+flip
+token
+double-faced
+
