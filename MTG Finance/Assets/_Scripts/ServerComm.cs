@@ -10,6 +10,7 @@ public class ServerComm : MonoBehaviour {
 	string cardImageServerURL = "http://ec2-52-10-109-207.us-west-2.compute.amazonaws.com:8080/mtg-card-images/";
 
 	WWW cardPriceGet;
+    WWW cardListGet;
 	WWW imageGet;
 
 	// Use this for initialization
@@ -36,6 +37,23 @@ public class ServerComm : MonoBehaviour {
         cardInfo = new JSONObject(cardPriceGet.text);
 
         return cardInfo;
+    }
+
+    public JSONObject RequestCardList(string cardName)
+    {
+        string cardInfoURL = cardInfoServerURL + cardName + "/";
+        cardListGet = new WWW(cardInfoURL);
+
+        JSONObject cardList = new JSONObject();
+
+        StartCoroutine(WaitForResponse(cardListGet));
+
+        //Must be done so that we don't read info from cardPriceGet before it's completely downloaded
+        while (!cardListGet.isDone) { }
+
+        cardList = new JSONObject(cardListGet.text);
+
+        return cardList;
     }
 
     public Sprite RequestCardImage(int multiverseID) {

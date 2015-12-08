@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using JSONObj;
 
 public class CardVersions : MonoBehaviour {
 	public Text cardNameText;
@@ -10,15 +11,55 @@ public class CardVersions : MonoBehaviour {
 	public Transform versionsPanel;
 	List<CardVersionResult> versionResults = new List<CardVersionResult>();
 
-	///Look at SearchBar.SearchFor(string search) to see how to populate the versionsPanel in this function
-	public void DisplayInformationFor(string cardName) {
-		Debug.LogError("Stub function CardVersions.DisplayInformationFor(string cardName) called.");
+    ServerComm server;
+
+    int maxNumberResultsShown = 10;
+
+    ///Look at SearchBar.SearchFor(string search) to see how to populate the versionsPanel in this function
+    public void DisplayInformationFor(string cardName) {
+        cardNameText.text = cardName;
+        //Get the list of all of the versions of the searched card
+        //Then build a dictionary out of that list (indexed with multiverse IDs)
+        JSONObject curListJSON = server.RequestCardList(cardName);
+        SpecificCardDictionary.BuildDictionary(curListJSON);
+
+        //Display the set names for each set the card appears in
+        int curResults = 0;
+        foreach (KeyValuePair<string, TCGPlayerInfo> curInfo in SpecificCardDictionary.cardListDict){
+            if (curResults >= maxNumberResultsShown) {
+                GameObject moreResultsGameObject = Instantiate(versionResultPrefab);
+                CardVersionResult moreResults = moreResultsGameObject.GetComponent<CardVersionResult>();
+                moreResultsGameObject.transform.SetParent(versionsPanel);
+                moreResults.buttonText.text = "-- All Results --";
+                versionResults.Add(moreResults);
+                break;
+            }
+
+            GameObject newResultGameObject = Instantiate(versionResultPrefab);
+            CardVersionResult newResult = newResultGameObject.GetComponent<CardVersionResult>();
+            newResultGameObject.transform.SetParent(versionsPanel);
+            //Set the version of the card
+            newResult.SetVersion(SpecificCardDictionary.cardListDict[curInfo.Key].multiverseID, SpecificCardDictionary.cardListDict[curInfo.Key].cardName, SpecificCardDictionary.cardListDict[curInfo.Key].setName);
+            curResults++;
+            versionResults.Add(newResult);
+        }
+
+		//Debug.LogError("Stub function CardVersions.DisplayInformationFor(string cardName) called.");
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public void DeleteVersionResults()
+    {
+        foreach (CardVersionResult item in versionResults)
+        {
+            Destroy(item.gameObject);
+        }
+        versionResults.Clear();
+    }
+
+    // Use this for initialization
+    void Start () {
+        server = GetComponent<ServerComm>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

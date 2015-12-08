@@ -164,12 +164,11 @@ public class MenuManager : MonoBehaviour {
 		cardVersionsPanel.GetComponent<CardVersions>().DisplayInformationFor(cardName);
 	}
 
-	public void DisplayCardInfo(string cardName, int multiverseID) {
-		print(multiverseID);
+	public void DisplayCardInfo(string setName, int multiverseID) {
 		PanelIn(cardInfoPanel);
 		state = States.cardInfo;
 
-		cardInfoPanel.GetComponent<CardInfo>().DisplayInformationFor(cardName, multiverseID);
+		cardInfoPanel.GetComponent<CardInfo>().DisplayInformationFor(setName, multiverseID);
 	}
 
 	//Make sure to call PanelIn(GameObject panelIn) before changing state

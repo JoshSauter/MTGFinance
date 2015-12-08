@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class CardVersionResult : MonoBehaviour {
-	Text buttonText;
+	public Text buttonText;
 	Button button;
 	public int multiverseID = -1;
 
@@ -13,14 +13,14 @@ public class CardVersionResult : MonoBehaviour {
 	}
 
 	public void SetVersion(int multiverseID, string cardName, string setName) {
-		buttonText.text = setName;
+        buttonText.text = setName;
 
 		//Make the button perform an action when clicked
-		string cardNameTemp = cardName;
+		string setNameTemp = cardName;
 		int multiverseIDTemp = multiverseID;
 		button.onClick.RemoveAllListeners();
 		button.onClick.AddListener(delegate {
-			MenuManager.S.DisplayCardInfo(cardNameTemp, multiverseIDTemp);
+			MenuManager.S.DisplayCardInfo(setNameTemp, multiverseIDTemp);
 			SearchBar.S.DeleteSearchResults();
 			SearchBar.S.ClearSearchTerms();
 		});
