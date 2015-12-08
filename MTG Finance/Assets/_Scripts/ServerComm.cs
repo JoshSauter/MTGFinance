@@ -42,7 +42,8 @@ public class ServerComm : MonoBehaviour {
     public JSONObject RequestCardList(string cardName)
     {
         string cardInfoURL = cardInfoServerURL + cardName + "/";
-        cardListGet = new WWW(cardInfoURL);
+		cardInfoURL = System.Uri.EscapeUriString(cardInfoURL);
+		cardListGet = new WWW(cardInfoURL);
 
         JSONObject cardList = new JSONObject();
 
@@ -56,8 +57,8 @@ public class ServerComm : MonoBehaviour {
         return cardList;
     }
 
-    public Sprite RequestCardImage(int multiverseID) {
-        string cardImageURL = cardImageServerURL + multiverseID + ".jpg";
+    public Sprite RequestCardImage(string urlEnding) {
+        string cardImageURL = cardImageServerURL + urlEnding;
 
         imageGet = new WWW(cardImageURL);
 

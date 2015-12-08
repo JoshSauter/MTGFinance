@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using JSONObj;
 
 public class MenuManager : MonoBehaviour {
 	public static MenuManager S;
@@ -164,11 +165,11 @@ public class MenuManager : MonoBehaviour {
 		cardVersionsPanel.GetComponent<CardVersions>().DisplayInformationFor(cardName);
 	}
 
-	public void DisplayCardInfo(string setName, int multiverseID) {
+	public void DisplayCardInfo(string setName, JSONObject versionInfo) {
 		PanelIn(cardInfoPanel);
 		state = States.cardInfo;
 
-		cardInfoPanel.GetComponent<CardInfo>().DisplayInformationFor(setName, multiverseID);
+		cardInfoPanel.GetComponent<CardInfo>().DisplayInformationFor(setName, versionInfo);
 	}
 
 	//Make sure to call PanelIn(GameObject panelIn) before changing state

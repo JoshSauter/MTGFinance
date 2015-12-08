@@ -17,15 +17,16 @@ public class CardVersions : MonoBehaviour {
 
     ///Look at SearchBar.SearchFor(string search) to see how to populate the versionsPanel in this function
     public void DisplayInformationFor(string cardName) {
+		DeleteVersionResults();
+
         cardNameText.text = cardName;
         //Get the list of all of the versions of the searched card
         //Then build a dictionary out of that list (indexed with multiverse IDs)
         JSONObject curListJSON = server.RequestCardList(cardName);
-        SpecificCardDictionary.BuildDictionary(curListJSON);
 
         //Display the set names for each set the card appears in
         int curResults = 0;
-        foreach (KeyValuePair<string, TCGPlayerInfo> curInfo in SpecificCardDictionary.cardListDict){
+        foreach (var setInfo in curListJSON["cards"].list){
             if (curResults >= maxNumberResultsShown) {
                 GameObject moreResultsGameObject = Instantiate(versionResultPrefab);
                 CardVersionResult moreResults = moreResultsGameObject.GetComponent<CardVersionResult>();
@@ -39,18 +40,17 @@ public class CardVersions : MonoBehaviour {
             CardVersionResult newResult = newResultGameObject.GetComponent<CardVersionResult>();
             newResultGameObject.transform.SetParent(versionsPanel);
             //Set the version of the card
-            newResult.SetVersion(SpecificCardDictionary.cardListDict[curInfo.Key].multiverseID, SpecificCardDictionary.cardListDict[curInfo.Key].cardName, SpecificCardDictionary.cardListDict[curInfo.Key].setName);
-            curResults++;
+            newResult.SetVersion(setInfo["set_name"].str, setInfo);
+
+			curResults++;
             versionResults.Add(newResult);
         }
 
 		//Debug.LogError("Stub function CardVersions.DisplayInformationFor(string cardName) called.");
 	}
 
-    public void DeleteVersionResults()
-    {
-        foreach (CardVersionResult item in versionResults)
-        {
+    public void DeleteVersionResults() {
+        foreach (CardVersionResult item in versionResults) {
             Destroy(item.gameObject);
         }
         versionResults.Clear();

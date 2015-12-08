@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTG Finance.CSharp", "MTG Finance.CSharp.csproj", "{13105FE7-AA69-4B3B-0D2C-C2DD1EC2ED05}"
 EndProject
 Global
