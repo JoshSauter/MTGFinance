@@ -3,11 +3,13 @@ from django.core.management.base import BaseCommand, CommandError
 from django.utils import timezone
 from mtg_prices.models import MTGCardPrice
 
-from nameparser import HumanName
 from xml.etree import ElementTree
 import os
 import requests
 import shutil
+
+from nameparser import config, HumanName
+config.CONSTANTS.prefixes.remove('van')
 
 MTG_JSON_URL = 'http://mtgjson.com/json/AllSets.json'
 
@@ -126,57 +128,10 @@ TCG_MULTIART_DISPLAY_SUFFIX = {
     1940: ' (Claws)', # Brassclaw Orcs
     1937: ' (Pike)', # Brassclaw Orcs
     1966: ' (Horned Helm)', # Brassclaw Orcs
-    #1973: ' (Danforth)', # Combat Medic
-    #1970: ' (Maddocks)', # Combat Medic
-    #1972: ' (Camp)', # Combat Medic
-    #1971: ' (Beard Jr.)', # Combat Medic
-    #1946: ' (Shuler)', # Dwarven Soldier
-    #1944: ' (Asplund-Faith)', # Dwarven Soldier
-    #1945: ' (Alexander)', # Dwarven Soldier
-    #1952: ' (Frazier)', # Goblin Grenade
-    #1951: ' (Spencer)', # Goblin Grenade
-    #1953: ' (Rush)', # Goblin Grenade
-    #1955: ' (Frazier)', # Goblin War Drums
-    #1956: ' (Hudson)', # Goblin War Drums
-    #1958: ' (Menges)', # Goblin War Drums
-    #1957: ' (Ferguson)', # Goblin War Drums
-    #1881: ' (Asplund-Faith)', # Homarid Warrior
-    #1882: ' (Gelon)', # Homarid Warrior
-    #1883: ' (Shuler)', # Homarid Warrior
     1850: ' (Wolf)', # Hymn to Tourach
     1851: ' (Cloak)', # Hymn to Tourach
     1849: ' (Circle)', # Hymn to Tourach
     1852: ' (Table)', # Hymn to Tourach
-    #1987: ' (Kirschner)', # Icatian Javelineers
-    #1985: ' (Beard Jr.)', # Icatian Javelineers
-    #1986: ' (Benson)', # Icatian Javelineers
-    #1995: ' (Foglio)', # Icatian Scout
-    #1996: ' (Alexander)', # Icatian Scout
-    #1994: ' (Ferguson)', # Icatian Scout
-    #1997: ' (Shuler)', # Icatian Scout
-    #1853: ' (Hudson)', # Initiates of the Ebon Hand
-    #1855: ' (Danforth)', # Initiates of the Ebon Hand
-    #1854: ' (Foglio)', # Initiates of the Ebon Hand
-    #1856: ' (Hudson)', # Mindstab Thrull
-    #1857: ' (Ferguson)', # Mindstab Thrull
-    #1858: ' (Tedin)', # Mindstab Thrull
-    #1861: ' (Tucker)', # Necrite
-    #1860: ' (Spencer)', # Necrite
-    #1859: ' (Rush)', # Necrite
-    #1918: ' (Everingham)', # Night Soil
-    #1919: ' (Tucker)', # Night Soil
-    #1917: ' (Hudson)', # Night Soil
-    #1962: ' (Camp)', # Orcish Spy
-    #1961: ' (Gelon)', # Orcish Spy
-    #1963: ' (Venters)', # Orcish Spy
-    #1927: ' (Spencer)', # Thallid
-    #1925: ' (Gelon)', # Thallid
-    #1924: ' (Beard Jr.)', # Thallid
-    #1926: ' (Myrfors)', # Thallid
-    #1899: ' (Benson)', # Vodalian Soldiers
-    #1901: ' (Menges)', # Vodalian Soldiers
-    #1900: ' (Ferguson)', # Vodalian Soldiers
-    #1902: ' (Camp)', # Vodalian Soldiers
     1072: ' (Spring)', # Mishra's Factory
     1071: ' (Fall)', # Mishra's Factory
     1074: ' (Winter)', # Mishra's Factory
@@ -225,7 +180,7 @@ TCG_MULTIART_DISPLAY_SUFFIX = {
     3209: ' (Red Dragon)', # Reprisal
     3210: ' (Green Monster)', # Reprisal
     3116: ' (Old Woman)', # Soldevi Sage
-    3117: ' (Two Candles)', # Soldevi Sage
+    3117: ' (2 Candles)', # Soldevi Sage
     3120: ' (Flying Left)', # Storm Crow
     3119: ' (Flying Right)', # Storm Crow
     3183: ' (Female)', # Storm Shaman
@@ -310,6 +265,8 @@ class Command(BaseCommand):
                     continue
                 else:
                     self._store_card_image(multiverse_id, flipped)
+                    print('Success\t{0}\t{1}'.format(
+                            card_names.tcg_name, set_names.tcg_name))
 
 
     def _can_track_set(self, set_json):
@@ -438,8 +395,9 @@ class Command(BaseCommand):
             tcg_link = tcg_link.text
 
         card_price_obj = MTGCardPrice.objects.filter(
+                card_name=card_names.official_name,
                 card_tcg_name=card_names.tcg_name,
-                set_tcg_name=set_names.tcg_name)
+                set_name=set_names.official_name)
         if card_price_obj.exists():
             card_price_obj.update(
                 last_updated=timezone.now(), tcg_low=tcg_low, tcg_mid=tcg_mid,
@@ -476,7 +434,7 @@ class Command(BaseCommand):
             return
 
         if flipped:
-            image_url = GATHER_FLIPPED_IMAGE_URL_FORMAT.format(
+            image_url = GATHERER_FLIPPED_IMAGE_URL_FORMAT.format(
                     multiverse_id=multiverse_id)
         else:
             image_url = GATHERER_IMAGE_URL_FORMAT.format(
