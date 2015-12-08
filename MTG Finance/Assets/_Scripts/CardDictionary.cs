@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using JSONObj;
 
 public class CardDictionary : MonoBehaviour {
+	public string loadLevel;
 	public static List<string> CardNames = new List<string>();
 	public static Dictionary<string, Card> Cards = new Dictionary<string, Card>();
 
@@ -68,7 +69,7 @@ public class CardDictionary : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 
 		//After dictionary is done building, load the main scene
-		Application.LoadLevel("_Scene_Main_JDS");
+		Application.LoadLevel(loadLevel);
 	}
 
 	//Returns all card names matching a particular search

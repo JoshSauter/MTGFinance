@@ -22,8 +22,7 @@ public class ServerComm : MonoBehaviour {
 	
 	}
 
-    public JSONObject RequestCardInfo(string cardName) {
-        int multiverseID = CardDictionary.Cards[cardName].multiverseID;
+    public JSONObject RequestCardInfo(int multiverseID) {
         string cardInfoURL = cardInfoServerURL + multiverseID + "/";
         cardPriceGet = new WWW(cardInfoURL);
 
@@ -39,8 +38,7 @@ public class ServerComm : MonoBehaviour {
         return cardInfo;
     }
 
-    public Sprite RequestCardImage(string cardName) {
-        int multiverseID = CardDictionary.Cards[cardName].multiverseID;
+    public Sprite RequestCardImage(int multiverseID) {
         string cardImageURL = cardImageServerURL + multiverseID + ".jpg";
 
         imageGet = new WWW(cardImageURL);
