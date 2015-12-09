@@ -24,7 +24,7 @@ public class CardInfo : MonoBehaviour {
 	//appropriate field with this information
 	//TODO: Cache prices for a given day so we don't query the server
 	//for prices we already know (prices only change daily)
-	public void DisplayInformationFor(string setName, JSONObject versionInfo) {
+	public void DisplayInformationFor(string cardName, string setName, JSONObject versionInfo) {
         ////Get card price info
         //TCGPlayerInfo curInfo = SpecificCardDictionary.cardListDict[setName];
         print("WHAAAAAT: " + setName);
@@ -40,8 +40,8 @@ public class CardInfo : MonoBehaviour {
 		imageButton.onClick.AddListener(delegate {
 			Application.OpenURL(tempGathererLink);
 		});
-
-        cardNameText.text = versionInfo["card_display_name"].str;
+		
+		cardNameText.text = cardName;
         cardPriceText.text = "TCG Player: $" + versionInfo["tcg_mid"].str;
 
 		//Set up price text to open up TCGPlayer page upon click
