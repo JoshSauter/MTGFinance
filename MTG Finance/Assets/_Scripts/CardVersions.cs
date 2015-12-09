@@ -40,7 +40,7 @@ public class CardVersions : MonoBehaviour {
             CardVersionResult newResult = newResultGameObject.GetComponent<CardVersionResult>();
             newResultGameObject.transform.SetParent(versionsPanel);
             //Set the version of the card
-            newResult.SetVersion(setInfo["set_name"].str, setInfo);
+            newResult.SetVersion(setInfo["set_display_name"].str, setInfo);
 
 			curResults++;
             versionResults.Add(newResult);

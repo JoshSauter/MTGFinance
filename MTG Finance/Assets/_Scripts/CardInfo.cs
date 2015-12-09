@@ -41,7 +41,7 @@ public class CardInfo : MonoBehaviour {
 			Application.OpenURL(tempGathererLink);
 		});
 
-        cardNameText.text = versionInfo["card_name"].str;
+        cardNameText.text = versionInfo["card_display_name"].str;
         cardPriceText.text = "TCG Player: $" + versionInfo["tcg_mid"].str;
 
 		//Set up price text to open up TCGPlayer page upon click
